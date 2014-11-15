@@ -85,10 +85,10 @@ public class VerboseSortedList<T extends Comparable<T>>
         return result;
       } // hasNext()
 
-      public void remove()
+    /*(  public void remove()
       {
         throw new UnsupportedOperationException();
-      } // remove()
+      } */// remove()
     }; // new Iterator<T>
   } // iterator()
 
@@ -159,4 +159,11 @@ public class VerboseSortedList<T extends Comparable<T>>
       } // for
     pen.println("]");
   } // dump()
+
+  @Override
+  public int size()
+  {
+    // TODO Auto-generated method stub
+    return 0;
+  }
 } // class VerboseSortedList

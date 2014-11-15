@@ -52,15 +52,15 @@ public class SortedListAnalyzer
     adds1.stop();
 
     // Grab the length (which may not be n)
-    int len = sl.length();
+   // int len = sl.length();
 
-    // Index
-    indices.start();
-    for (int i = 0; i < n; i++)
-      {
-        sl.get(random.nextInt(len));
-      } // for
-    indices.stop();
+//    // Index
+//    indices.start();
+//    for (int i = 0; i < n; i++)
+//      {
+//        sl.get(random.nextInt(len));
+//     } // for
+//    indices.stop();
 
     // Iterate
     iterate.start();
@@ -76,25 +76,25 @@ public class SortedListAnalyzer
       } // for
     adds2.stop();
 
-    // First set of removals (all even)
-    removes1.start();
-    Iterator<Integer> it = sl.iterator();
-    while (it.hasNext())
-      {
-        if (it.next() % 2 == 0)
-          it.remove();
-      } // while (it.hasNext())
-    removes2.stop();
+//    // First set of removals (all even)
+//    removes1.start();
+//    Iterator<Integer> it = sl.iterator();
+//    while (it.hasNext())
+//      {
+//        if (it.next() % 2 == 0)
+//          it.remove();
+//      } // while (it.hasNext())
+//    removes2.stop();
 
-    // Second set of removals
-    removes2.start();
-    it = sl.iterator();
-    while (it.hasNext())
-      {
-        it.next();
-        it.remove();
-      } // while (it.hasNext();
-    removes2.stop();
+//    // Second set of removals
+//    removes2.start();
+//    it = sl.iterator();
+//    while (it.hasNext())
+//      {
+//        it.next();
+//        it.remove();
+//      } // while (it.hasNext();
+//    removes2.stop();
 
     // And we're done
     overall.stop();

@@ -170,4 +170,11 @@ public class SortedLinkedList<T extends Comparable<T>>
   {
     return this.core.size();
   } // length()
+
+  @Override
+  public int size()
+  {
+    // TODO Auto-generated method stub
+    return 0;
+  }
 } // class SortedArrayList<T>

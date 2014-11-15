@@ -139,7 +139,7 @@ public class SkipList<T extends Comparable<T>>
             }//if
           else
             {
-              cursor = cursor.nextArray[0];
+              cursor = cursor.nextArray[0]; 
             }//else
           return cursor.val;
         }//next()
@@ -307,6 +307,7 @@ public class SkipList<T extends Comparable<T>>
    * @throws IndexOutOfBoundsException
    *   if the index is out of range (index < 0 || index >= length)
    */
+  
   public T get(int i)
   {
     // STUB
@@ -316,10 +317,10 @@ public class SkipList<T extends Comparable<T>>
   /**
    * Determine the number of elements in the collection.
    */
-  public int length()
+  
+ public int length()
   {
-    // STUB
-    return 0;
+    return this.size;
   } // length()
 
 } // class SkipList<T>
