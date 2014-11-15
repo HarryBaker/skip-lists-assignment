@@ -233,4 +233,72 @@ public class SortedListTest
           } // if (!ok)
       } // for i
   } // randomTest()
+  
+  //checks if using the contains method on a value that is bigger
+  //than any other value in the list responds appropriately. That is
+  //it should return a false, rather than a NullPointerException
+  //when the end of the list is reached.
+  @Test
+  public void containsTooBig()
+  {
+    ints.add(1);
+    ints.add(6);
+    ints.add(500);
+    assertFalse(ints.contains(600));
+  }
+  
+  //checks if the add method will only add a value if it is not already in the list.
+  @Test
+  public void addsTwice()
+  {
+    ints.add(1);
+    ints.add(6);
+    ints.add(1);
+    ints.remove(1);
+    assertFalse(ints.contains(1));
+  }
+  
+  //Checks if list can handle positives and negatives of same
+  // |i|
+  @Test
+  public void addsNegatives()
+  {
+    ints.add(-1);
+    ints.add(1);
+    assertTrue(ints.contains(-1) && ints.contains(1));
+  }
+  
+  //Checks to see if it's possible to remove either the header or 
+  //the dummy null nodes
+  @Test
+  public void removeNull()
+  {
+    ints.remove(null);
+    assertEquals(ints.size(), 0);
+  }
+  
+  //Checks to see if it's possible to add a node of value null
+  @Test
+  public void addNull()
+  {
+    ints.add(null);
+    assertEquals(ints.size(), 0);
+  }
+  
+  //Check that the contains method works on values that are not 
+  //primative types, ie over 127. If the code uses == rather than
+  // .equals or .compareTo, there could be problems with more general
+  //object types.
+  @Test
+  public void addOver127()
+  {
+    ints.add(2);
+    ints.add(7);
+    ints.add(15);
+    ints.add(130);
+    assertTrue(ints.contains(130));
+  }
+  
+  
+  
 } // class SortedListTest

@@ -10,7 +10,7 @@ import taojava.util.SkipList;
  * @author Samuel A. Rebelsky
  */
 public class SkipListTest
-extends SortedListTest
+    extends SortedListTest
 {
   @Before
   public void setup()

@@ -22,4 +22,6 @@ public interface SortedList<T extends Comparable<T>>
    * list can have more than one copy of the same value.
    */
   public void add(T val);
+
+  public int size();
 } // interface SortedList<T>
